@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import List
 
 class EmbeddingRequest(BaseModel):
-    text: str
+    texts: List[str]
 
 class EmbeddingResponse(BaseModel):
-    embedding: List[float]
+    embeddings: List[List[float]]
