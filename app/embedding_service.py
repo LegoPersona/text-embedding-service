@@ -1,5 +1,5 @@
 from .model_loader import get_model
 
-async def embed_text(text: str):
+async def embed_texts(texts: list[str]):
     model = get_model()
-    return model.encode(text).tolist()
+    return model.encode(texts).tolist()
